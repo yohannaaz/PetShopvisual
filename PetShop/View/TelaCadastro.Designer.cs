@@ -46,18 +46,18 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            cbx_sexoPet = new ComboBox();
+            cbx_portePet = new ComboBox();
+            tbx_nomeTutor = new TextBox();
+            tbx_telefoneTutor = new TextBox();
+            tbx_enderecoTutor = new TextBox();
+            tbx_cpfTutor = new TextBox();
+            tbx_nomePet = new TextBox();
+            tbx_racaPet = new TextBox();
+            btx_cadastrarCadastro = new Button();
+            btx_deletarCadastro = new Button();
+            btx_gerarCodigoCliente = new Button();
+            tbx_codigoCliente = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -69,7 +69,7 @@
             label1.BackColor = Color.MidnightBlue;
             label1.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(247, 91);
+            label1.Location = new Point(294, 91);
             label1.Name = "label1";
             label1.Size = new Size(161, 23);
             label1.TabIndex = 0;
@@ -94,7 +94,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Kristen ITC", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(247, 123);
+            label3.Location = new Point(294, 123);
             label3.Name = "label3";
             label3.Size = new Size(52, 17);
             label3.TabIndex = 2;
@@ -106,7 +106,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Forte", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(397, 40);
+            label4.Location = new Point(419, 40);
             label4.Name = "label4";
             label4.Size = new Size(163, 38);
             label4.TabIndex = 3;
@@ -137,7 +137,7 @@
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(-2, -11);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(223, 488);
+            pictureBox3.Size = new Size(262, 488);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
@@ -148,7 +148,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Kristen ITC", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(247, 188);
+            label5.Location = new Point(294, 188);
             label5.Name = "label5";
             label5.Size = new Size(79, 17);
             label5.TabIndex = 7;
@@ -160,7 +160,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Kristen ITC", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(247, 156);
+            label6.Location = new Point(294, 156);
             label6.Name = "label6";
             label6.Size = new Size(74, 17);
             label6.TabIndex = 8;
@@ -172,7 +172,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Kristen ITC", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(247, 224);
+            label7.Location = new Point(294, 224);
             label7.Name = "label7";
             label7.Size = new Size(0, 17);
             label7.TabIndex = 9;
@@ -231,105 +231,108 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Kristen ITC", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ButtonHighlight;
-            label12.Location = new Point(247, 224);
+            label12.Location = new Point(294, 224);
             label12.Name = "label12";
             label12.Size = new Size(41, 17);
             label12.TabIndex = 14;
             label12.Text = "CPF:";
             // 
-            // comboBox1
+            // cbx_sexoPet
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(588, 182);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(87, 23);
-            comboBox1.TabIndex = 15;
+            cbx_sexoPet.FormattingEnabled = true;
+            cbx_sexoPet.Items.AddRange(new object[] { "Feminino", "Masculino" });
+            cbx_sexoPet.Location = new Point(588, 182);
+            cbx_sexoPet.Name = "cbx_sexoPet";
+            cbx_sexoPet.Size = new Size(87, 23);
+            cbx_sexoPet.TabIndex = 15;
             // 
-            // comboBox2
+            // cbx_portePet
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(588, 218);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(87, 23);
-            comboBox2.TabIndex = 16;
+            cbx_portePet.FormattingEnabled = true;
+            cbx_portePet.Location = new Point(588, 218);
+            cbx_portePet.Name = "cbx_portePet";
+            cbx_portePet.Size = new Size(87, 23);
+            cbx_portePet.TabIndex = 16;
             // 
-            // textBox1
+            // tbx_nomeTutor
             // 
-            textBox1.Location = new Point(305, 121);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(103, 23);
-            textBox1.TabIndex = 17;
+            tbx_nomeTutor.Location = new Point(352, 121);
+            tbx_nomeTutor.Name = "tbx_nomeTutor";
+            tbx_nomeTutor.Size = new Size(103, 23);
+            tbx_nomeTutor.TabIndex = 17;
             // 
-            // textBox2
+            // tbx_telefoneTutor
             // 
-            textBox2.Location = new Point(327, 150);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(81, 23);
-            textBox2.TabIndex = 18;
+            tbx_telefoneTutor.Location = new Point(374, 150);
+            tbx_telefoneTutor.Name = "tbx_telefoneTutor";
+            tbx_telefoneTutor.Size = new Size(81, 23);
+            tbx_telefoneTutor.TabIndex = 18;
             // 
-            // textBox3
+            // tbx_enderecoTutor
             // 
-            textBox3.Location = new Point(327, 182);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(81, 23);
-            textBox3.TabIndex = 19;
+            tbx_enderecoTutor.Location = new Point(374, 182);
+            tbx_enderecoTutor.Name = "tbx_enderecoTutor";
+            tbx_enderecoTutor.Size = new Size(81, 23);
+            tbx_enderecoTutor.TabIndex = 19;
             // 
-            // textBox4
+            // tbx_cpfTutor
             // 
-            textBox4.Location = new Point(294, 218);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(114, 23);
-            textBox4.TabIndex = 20;
+            tbx_cpfTutor.Location = new Point(341, 218);
+            tbx_cpfTutor.Name = "tbx_cpfTutor";
+            tbx_cpfTutor.Size = new Size(114, 23);
+            tbx_cpfTutor.TabIndex = 20;
             // 
-            // textBox5
+            // tbx_nomePet
             // 
-            textBox5.Location = new Point(588, 121);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(87, 23);
-            textBox5.TabIndex = 21;
+            tbx_nomePet.Location = new Point(588, 121);
+            tbx_nomePet.Name = "tbx_nomePet";
+            tbx_nomePet.Size = new Size(87, 23);
+            tbx_nomePet.TabIndex = 21;
             // 
-            // textBox6
+            // tbx_racaPet
             // 
-            textBox6.Location = new Point(588, 154);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(87, 23);
-            textBox6.TabIndex = 22;
+            tbx_racaPet.Location = new Point(588, 154);
+            tbx_racaPet.Name = "tbx_racaPet";
+            tbx_racaPet.Size = new Size(87, 23);
+            tbx_racaPet.TabIndex = 22;
             // 
-            // button1
+            // btx_cadastrarCadastro
             // 
-            button1.Location = new Point(285, 298);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 23;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
+            btx_cadastrarCadastro.BackColor = Color.LawnGreen;
+            btx_cadastrarCadastro.Location = new Point(400, 376);
+            btx_cadastrarCadastro.Name = "btx_cadastrarCadastro";
+            btx_cadastrarCadastro.Size = new Size(75, 23);
+            btx_cadastrarCadastro.TabIndex = 23;
+            btx_cadastrarCadastro.Text = "Cadastrar";
+            btx_cadastrarCadastro.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btx_deletarCadastro
             // 
-            button2.Location = new Point(366, 298);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 24;
-            button2.Text = "Deletar";
-            button2.UseVisualStyleBackColor = true;
+            btx_deletarCadastro.BackColor = Color.Red;
+            btx_deletarCadastro.Location = new Point(537, 376);
+            btx_deletarCadastro.Name = "btx_deletarCadastro";
+            btx_deletarCadastro.Size = new Size(63, 23);
+            btx_deletarCadastro.TabIndex = 24;
+            btx_deletarCadastro.Text = "Deletar";
+            btx_deletarCadastro.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btx_gerarCodigoCliente
             // 
-            button3.Location = new Point(294, 327);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 25;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btx_gerarCodigoCliente.BackColor = Color.LavenderBlush;
+            btx_gerarCodigoCliente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btx_gerarCodigoCliente.Location = new Point(352, 269);
+            btx_gerarCodigoCliente.Name = "btx_gerarCodigoCliente";
+            btx_gerarCodigoCliente.Size = new Size(295, 25);
+            btx_gerarCodigoCliente.TabIndex = 25;
+            btx_gerarCodigoCliente.Text = "Gerar Código Cliente";
+            btx_gerarCodigoCliente.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // tbx_codigoCliente
             // 
-            button4.Location = new Point(375, 327);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 26;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            tbx_codigoCliente.Location = new Point(458, 300);
+            tbx_codigoCliente.Name = "tbx_codigoCliente";
+            tbx_codigoCliente.Size = new Size(81, 23);
+            tbx_codigoCliente.TabIndex = 27;
             // 
             // TelaCadastro
             // 
@@ -339,18 +342,18 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(723, 478);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(tbx_codigoCliente);
+            Controls.Add(btx_gerarCodigoCliente);
+            Controls.Add(btx_deletarCadastro);
+            Controls.Add(btx_cadastrarCadastro);
+            Controls.Add(tbx_racaPet);
+            Controls.Add(tbx_nomePet);
+            Controls.Add(tbx_cpfTutor);
+            Controls.Add(tbx_enderecoTutor);
+            Controls.Add(tbx_telefoneTutor);
+            Controls.Add(tbx_nomeTutor);
+            Controls.Add(cbx_portePet);
+            Controls.Add(cbx_sexoPet);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -396,17 +399,17 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private ComboBox cbx_sexoPet;
+        private ComboBox cbx_portePet;
+        private TextBox tbx_nomeTutor;
+        private TextBox tbx_telefoneTutor;
+        private TextBox tbx_enderecoTutor;
+        private TextBox tbx_cpfTutor;
+        private TextBox tbx_nomePet;
+        private TextBox tbx_racaPet;
+        private Button btx_cadastrarCadastro;
+        private Button btx_deletarCadastro;
+        private Button btx_gerarCodigoCliente;
+        private TextBox tbx_codigoCliente;
     }
 }

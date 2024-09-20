@@ -32,13 +32,14 @@
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             agendamentoToolStripMenuItem = new ToolStripMenuItem();
+            pesquisarToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.MidnightBlue;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, agendamentoToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, agendamentoToolStripMenuItem, pesquisarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(601, 26);
@@ -60,6 +61,14 @@
             agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
             agendamentoToolStripMenuItem.Size = new Size(126, 22);
             agendamentoToolStripMenuItem.Text = "Agendamento";
+            // 
+            // pesquisarToolStripMenuItem
+            // 
+            pesquisarToolStripMenuItem.Font = new Font("Gill Sans Ultra Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pesquisarToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
+            pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
+            pesquisarToolStripMenuItem.Size = new Size(94, 22);
+            pesquisarToolStripMenuItem.Text = "Pesquisar";
             // 
             // TelaHome
             // 
@@ -85,5 +94,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem agendamentoToolStripMenuItem;
+        private ToolStripMenuItem pesquisarToolStripMenuItem;
     }
 }
